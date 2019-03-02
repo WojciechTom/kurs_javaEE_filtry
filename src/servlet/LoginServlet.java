@@ -8,18 +8,20 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
 
     private static final String USERNAME = "admin";
-    private static final String PASSWORD = "tajnehaslo";
+    private static final String PASSWORD = "haslo";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String userName = request.getParameter("username");
         String password = request.getParameter("password");
+        System.out.println("user i hasło podane " + userName + " " + password);
 
         if(userName.equals(USERNAME) && password.equals(PASSWORD)){
             System.out.println("hasło i użytkownik poprawne");
             request.getSession(true).setAttribute("username", userName);
-        } else {
-            response.sendRedirect("admin.jsp");
+
         }
+            response.sendRedirect("admin.jsp");
+
     }
 
 }

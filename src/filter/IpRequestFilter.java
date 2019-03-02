@@ -19,7 +19,7 @@ public class IpRequestFilter implements Filter {
         String requestIp = servletRequest.getRemoteAddr();
         System.out.println("Ip filter " + requestIp);
 
-        if(requestIp.matches(ipPattern)){
+        if(true){      //requestIp.matches(ipPattern)){
             System.out.println("IP ok");
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
