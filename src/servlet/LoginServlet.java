@@ -1,10 +1,12 @@
 package servlet;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+//@WebServlet("/LoginServlet") //drugi sposób podpinania servletów
 public class LoginServlet extends HttpServlet {
 
     private static final String USERNAME = "admin";
